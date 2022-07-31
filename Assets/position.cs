@@ -7,25 +7,40 @@ public class position : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         //hide 명령어
-        GameObject obj0 = GameObject.Find("shape_cube");
+        //모양블록 비활성화
+        GameObject obj0 = GameObject.Find("shape_cube");  //모양블록 = obj 나중에 태그로 하거나 노가다
         Vector3 pos;
         pos = obj0.GameObject.transform.position;
-        
-        for (int i = 0; i < 5; i++)
+
+        while (true) //이러면 겜 실행할 동안 무한반복이 되나
         {
-            for (int k = 0; k < 5; k++)
+            for (int i = 0; i < 5; i++)
             {
-                for (int r = 0; r < 8; r++)
+                for (int k = 0; k < 5; k++)
                 {
-                   
-                    if (pos.x == i && pos.z == k && pos.y == r)
+                    for (int r = 0; r < 8; r++)
                     {
-                       obj0.SetActive(false);
+
+                        if (pos.x == i && pos.z == k && pos.y == r)
+                        {
+                            obj0.SetActive(false);
+                            int i = 0;
+                            int k = 0;
+                            int r = 0;
+                        }
                     }
                 }
             }
         }
+
+
+
+
+       
+        
+        
 
 
     }
@@ -48,7 +63,7 @@ public class position : MonoBehaviour
                 {
                     //count == ?|| ?는 큐브 넘버 ???
                   
-                    if (position[x][y][z] == true & count == 1)
+                    if (position[x][z][y] == true)
                     {
                             
                      //show 명령어
@@ -64,4 +79,12 @@ public class position : MonoBehaviour
             }
         }
     }
+
+    //떨어지는 물체 
+
+    //떨어진 물체
+
+
+
+
 }
